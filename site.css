@@ -146,3 +146,19 @@ a:hover{color:#214e50;text-decoration:none}
 /* Decorative research motif, softened into the paper background. */
 body::after{content:"";position:fixed;right:-55px;bottom:-50px;width:440px;height:440px;background:url("assets/brain-gene-ai.jpg") center/contain no-repeat;filter:grayscale(1) contrast(2);mix-blend-mode:multiply;opacity:.09;pointer-events:none;z-index:-1}
 @media(max-width:740px){body::after{width:260px;height:260px;right:-60px;bottom:-35px;opacity:.06}}
+
+/* Give contact details room while keeping the email address intact. */
+.wrap{width:min(100% - 64px,1100px)}
+.intro{grid-template-columns:minmax(0,1fr) 250px;gap:64px}
+.contact a[href^="mailto:"]{white-space:nowrap;overflow-wrap:normal}
+@media(max-width:740px){
+ .wrap{width:calc(100% - 40px)}
+ .intro{grid-template-columns:1fr}
+ .intro>.contact{grid-template-columns:130px minmax(0,1fr)}
+}
+@media(max-width:560px){
+ .intro>.contact{display:block}
+ .profile-photo{margin-bottom:24px}
+ .contact h2{margin-top:0}
+}
+@media(max-width:360px){.contact a[href^="mailto:"]{font-size:14px}}
