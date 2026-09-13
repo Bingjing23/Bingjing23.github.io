@@ -142,3 +142,7 @@ a:hover{color:#214e50;text-decoration:none}
 .navlinks a:hover,.navlinks a[aria-current="page"],.contact li a{text-decoration:none}
 .navlinks a[aria-current="page"]{color:#214e50;font-weight:600}
 .contact li a:hover{color:#214e50}
+
+/* Decorative research motif, softened into the paper background. */
+body::after{content:"";position:fixed;right:-55px;bottom:-50px;width:440px;height:440px;background:url("assets/brain-gene-ai.jpg") center/contain no-repeat;filter:grayscale(1) contrast(2);mix-blend-mode:multiply;opacity:.09;pointer-events:none;z-index:-1}
+@media(max-width:740px){body::after{width:260px;height:260px;right:-60px;bottom:-35px;opacity:.06}}
